@@ -1,0 +1,73 @@
+# This workflow demonstrates the CI/CD pipelines for deployment in development, staging and production environments for the Auction web application.
+
+name: Auction Web-App CI/CD pipeline
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+    workflow_dispatch:
+
+jobs:
+    
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Setup .NET
+              uses: actions/setup-dotnet@v1
+              with:
+                dotnet-version: '6.0.x'
+
+            - name: Code_scanning
+              run: echo We are linting and scanning our code here
+            
+            - name: Build
+              run: dotnet build --configuration Release
+
+            - name: Test
+              run: dotnet test
+
+            - name: Publish Artifact
+              run: dotnet publish -c Release -o $(Build.ArtifactStagingDirectory)
+
+    DeployDev:
+        name: Deploy to Development
+        if: github.event_name == 'pull_request'
+        needs: [ build ]
+        runs-on: ubuntu-latest
+        environment:
+            name: Development
+            url: 'http://dev.auction-web-app.com'
+        steps:
+            - name: Deploy to dev
+              run: echo your code is being deployed to 'http://dev.auction-web-app.com'
+
+    DeployStaging:
+                name: Deploy to Staging
+                if: github.event.ref == 'refs/heads/main'
+                needs: [ build ]
+                runs-on: ubuntu-latest
+                environment:
+                    name: Staging
+                    url: 'http://test.auction-web-app.com'
+                steps:
+                    - name: Deploy to dev
+                      run: echo your code is being deployed to staging 'http://test.auction-web-app.com'
+                      
+    DeployProduction:
+              name: Deploy to Production
+              needs: [ DeployStaging ]
+              run-on: ubuntu-latest
+              environment:
+                name: Production
+                url: 'http://www.auctionapp.com'
+            steps:
+                -name: Deploy to production
+                 run echo your code is being deployed to production 'http://www.auction-web-app.com'
+             
+
+    

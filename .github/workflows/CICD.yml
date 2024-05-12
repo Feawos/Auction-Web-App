@@ -1,0 +1,119 @@
+# This workflow demonstrates the CI/CD pipelines for deployment in development, staging and production environments for the Auction web application.
+
+name: ASP.NET MVC Auction Web-App CI/CD pipeline 
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build project
+      run: dotnet build --configuration Release
+
+    - name: Test project
+      run: dotnet test
+
+  code_scanning:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Analyze code with SonarCloud
+        uses: sonarsource/sonarcloud-github-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  deploy_dev:
+    runs-on: ubuntu-latest
+    needs: [build, code_scanning]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Publish Artifact
+        run: dotnet publish -c Release -o ${{github.workspace}}/publish
+
+      - name: Deploy to Development
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'feawosauctions/Development'
+          slot-name: 'development'
+          publish-profile: ${{ secrets.DEV_AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: '${{github.workspace}}/publish'
+
+  deploy_staging:
+    runs-on: ubuntu-latest
+    needs: [build, code_scanning]
+    if: github.ref == 'refs/tags/staging'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Publish Artifact
+        run: dotnet publish -c Release -o ${{github.workspace}}/publish
+
+      - name: Deploy to Staging
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'feawosauctions/Staging'
+          slot-name: 'staging'
+          publish-profile: ${{ secrets.STAGING_AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: '${{github.workspace}}/publish'
+
+  deploy_prod:
+    runs-on: ubuntu-latest
+    needs: [build, code_scanning]
+    if: github.ref == 'refs/tags/release'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Publish Artifact
+        run: dotnet publish -c Release -o ${{github.workspace}}/publish
+
+      - name: Deploy to Production
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'feawosauctions'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.PROD_AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: '${{github.workspace}}/publish'
+

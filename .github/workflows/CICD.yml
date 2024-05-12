@@ -28,8 +28,12 @@ jobs:
       with:
         dotnet-version: '7.0.x'
 
+    - name: List directory contents
+      run: ls -R
+
     - name: Restore dependencies
       run: dotnet restore
+      working-directory: ./https://github.com/Feawos/Auction-Web-App/tree/main/AuctionWebApplication
 
     - name: Build project
       run: dotnet build --configuration Release

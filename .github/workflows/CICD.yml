@@ -33,7 +33,7 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore ./Auction-Web-App/AuctionWebApplication/AuctionWebApplication.csproj
-      working-directory: ./Auction-Web-App/AuctionWebApplication/AuctionWebApplication.csproj
+      working-directory: ./Auction-Web-App/AuctionWebApplication
 
     - name: Build project
       run: dotnet build --configuration Release ./Auction-Web-App/AuctionWebApplication/AuctionWebApplication.csproj

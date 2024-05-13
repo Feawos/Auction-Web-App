@@ -32,14 +32,14 @@ jobs:
       run: ls -R
 
     - name: Restore dependencies
-      run: dotnet restore
-      working-directory: https://github.com/Feawos/Auction-Web-App/blob/main/AuctionWebApplication/AuctionWebApplication.csproj
+      run: dotnet restore ./Auction-Web-App/AuctionWebApplication/AuctionWebApplication.csproj
+      working-directory: ./Auction-Web-App/AuctionWebApplication
 
     - name: Build project
-      run: dotnet build --configuration Release
+      run: dotnet build --configuration Release ./Auction-Web-App/AuctionWebApplication/AuctionWebApplication.csproj
 
     - name: Test project
-      run: dotnet test
+      run: dotnet test ./Auction-Web-App/AuctionWebApplication/AuctionWebApplication.csproj
 
   code_scanning:
     runs-on: ubuntu-latest

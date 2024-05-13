@@ -33,7 +33,7 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
-      # working-directory: Feawos/Auction-Web-App/tree/main/AuctionWebApplication
+      working-directory: https://github.com/Feawos/Auction-Web-App/blob/main/AuctionWebApplication/AuctionWebApplication.csproj
 
     - name: Build project
       run: dotnet build --configuration Release

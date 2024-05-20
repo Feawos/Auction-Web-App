@@ -1,4 +1,6 @@
 using AuctionWebApplication.Data;
+using AuctionWebApplication.Data.Services;
+using AuctionWebApplication.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,9 +12,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IListingsService, ListingsService>();
+builder.Services.AddScoped<IBidsService, BidsService>();
+builder.Services.AddScoped<ICommentsService, CommentsService>();
 
 var app = builder.Build();
 

@@ -39,6 +39,10 @@ button.accept-policy {
   line-height: inherit;
 }
 
+.pagination {
+    position:absolute;
+}
+
 .footer {
   position: absolute;
   bottom: 0;

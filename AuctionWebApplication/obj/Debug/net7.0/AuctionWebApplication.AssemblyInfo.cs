@@ -11,11 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-AuctionWebApplication-4e550272-d42e-400d-ac3a-b2344044501f")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuctionWebApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5014dd1031c8a50f3adcd882e6aab9bd6149587a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfcbbe2e7f712ae0cf08b3392583bbdbc7dfb572")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuctionWebApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuctionWebApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

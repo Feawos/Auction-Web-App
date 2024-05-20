@@ -1,0 +1,53 @@
+/* _content/AuctionWebApplication/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-tog8mc84gr] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-tog8mc84gr] {
+  color: #0077cc;
+}
+
+.btn-primary[b-tog8mc84gr] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-tog8mc84gr], .nav-pills .show > .nav-link[b-tog8mc84gr] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-tog8mc84gr] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-tog8mc84gr] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-tog8mc84gr] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-tog8mc84gr] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.pagination[b-tog8mc84gr] {
+    position:absolute;
+}
+
+.footer[b-tog8mc84gr] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

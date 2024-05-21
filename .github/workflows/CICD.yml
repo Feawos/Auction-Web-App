@@ -33,12 +33,15 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore AuctionWebApplication/AuctionWebApplication.csproj
+      working-directory: ./AuctionWebApplication
      
     - name: Build project
       run: dotnet build --configuration Release AuctionWebApplication/AuctionWebApplication.csproj
-
+      working-directory: ./AuctionWebApplication
+      
     - name: Test project
       run: dotnet test AuctionWebApplication/AuctionWebApplication.csproj
+      working-directory: ./AuctionWebApplication
 
   code_scanning:
     runs-on: ubuntu-latest
@@ -77,7 +80,7 @@ jobs:
 
       - name: Publish Artifact
         run: dotnet publish -c Release -o ${{github.workspace}}/publish ./Auction-Web-App/AuctionWebApplication/AuctionWebApplication.csproj
-        working-directory: ./Auction-Web-App
+        working-directory: ./AuctionWebApplication
 
       - name: Deploy to Development
         uses: azure/webapps-deploy@v2
@@ -107,7 +110,7 @@ jobs:
 
       - name: Publish Artifact
         run: dotnet publish -c Release -o ${{github.workspace}}/publish ./Auction-Web-App/AuctionWebApplication/AuctionWebApplication.csproj
-        working-directory: ./Auction-Web-App
+        working-directory: ./AuctionWebApplication
 
       - name: Deploy to Staging
         uses: azure/webapps-deploy@v2
@@ -137,7 +140,7 @@ jobs:
 
       - name: Publish Artifact
         run: dotnet publish -c Release -o ${{github.workspace}}/publish ./Auction-Web-App/AuctionWebApplication/AuctionWebApplication.csproj
-        working-directory: ./Auction-Web-App
+        working-directory: ./AuctionWebApplication
 
       - name: Deploy to Production
         uses: azure/webapps-deploy@v2

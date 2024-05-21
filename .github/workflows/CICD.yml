@@ -30,6 +30,7 @@ jobs:
 
     - name: List directory contents
       run: ls -R
+      working-directory: ./AuctionWebApplication
 
     - name: Restore dependencies
       run: dotnet restore AuctionWebApplication/AuctionWebApplication.csproj

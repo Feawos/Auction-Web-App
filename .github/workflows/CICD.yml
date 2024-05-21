@@ -81,7 +81,7 @@ jobs:
 
       - name: Publish Artifact
         run: dotnet publish -c Release -o ${{github.workspace}}/publish ./Auction-Web-App/AuctionWebApplication/AuctionWebApplication.csproj
-        working-directory: /AuctionWebApplication
+        working-directory: AuctionWebApplication
 
       - name: Deploy to Development
         uses: azure/webapps-deploy@v2

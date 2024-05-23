@@ -1,0 +1,157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|c:\\users\\awosanya\\source\\repos\\feawos\\auction-web-app\\auctionwebapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|solutionrelative:auctionwebapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|c:\\users\\awosanya\\source\\repos\\feawos\\auction-web-app\\auctionwebapplication\\views\\listings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|solutionrelative:auctionwebapplication\\views\\listings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|c:\\users\\awosanya\\source\\repos\\feawos\\auction-web-app\\auctionwebapplication\\views\\listings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|solutionrelative:auctionwebapplication\\views\\listings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|c:\\users\\awosanya\\source\\repos\\feawos\\auction-web-app\\auctionwebapplication\\views\\listings\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|solutionrelative:auctionwebapplication\\views\\listings\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|c:\\users\\awosanya\\source\\repos\\feawos\\auction-web-app\\auctionwebapplication\\views\\listings\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|solutionrelative:auctionwebapplication\\views\\listings\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|c:\\users\\awosanya\\source\\repos\\feawos\\auction-web-app\\auctionwebapplication\\views\\listings\\mylistings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|solutionrelative:auctionwebapplication\\views\\listings\\mylistings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|c:\\users\\awosanya\\source\\repos\\feawos\\auction-web-app\\auctionwebapplication\\views\\listings\\mybids.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|solutionrelative:auctionwebapplication\\views\\listings\\mybids.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|c:\\users\\awosanya\\source\\repos\\feawos\\auction-web-app\\auctionwebapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63F5485-9E92-413C-BBF7-8A1A940A9CF9}|AuctionWebApplication\\AuctionWebApplication.csproj|solutionrelative:auctionwebapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\Create.cshtml",
+              "RelativeDocumentMoniker": "AuctionWebApplication\\Views\\Listings\\Create.cshtml",
+              "ToolTip": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\Create.cshtml",
+              "RelativeToolTip": "AuctionWebApplication\\Views\\Listings\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T21:16:23.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\Details.cshtml",
+              "RelativeDocumentMoniker": "AuctionWebApplication\\Views\\Listings\\Details.cshtml",
+              "ToolTip": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\Details.cshtml",
+              "RelativeToolTip": "AuctionWebApplication\\Views\\Listings\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T21:16:12.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\Edit.cshtml",
+              "RelativeDocumentMoniker": "AuctionWebApplication\\Views\\Listings\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\Edit.cshtml",
+              "RelativeToolTip": "AuctionWebApplication\\Views\\Listings\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T21:16:02.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MyListings.cshtml",
+              "DocumentMoniker": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\MyListings.cshtml",
+              "RelativeDocumentMoniker": "AuctionWebApplication\\Views\\Listings\\MyListings.cshtml",
+              "ToolTip": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\MyListings.cshtml",
+              "RelativeToolTip": "AuctionWebApplication\\Views\\Listings\\MyListings.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T21:15:55.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MyBids.cshtml",
+              "DocumentMoniker": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\MyBids.cshtml",
+              "RelativeDocumentMoniker": "AuctionWebApplication\\Views\\Listings\\MyBids.cshtml",
+              "ToolTip": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\MyBids.cshtml",
+              "RelativeToolTip": "AuctionWebApplication\\Views\\Listings\\MyBids.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T21:15:52.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\Index.cshtml",
+              "RelativeDocumentMoniker": "AuctionWebApplication\\Views\\Listings\\Index.cshtml",
+              "ToolTip": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Listings\\Index.cshtml",
+              "RelativeToolTip": "AuctionWebApplication\\Views\\Listings\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T20:51:25.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AuctionWebApplication\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AuctionWebApplication\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-22T20:47:07.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Program.cs",
+              "RelativeDocumentMoniker": "AuctionWebApplication\\Program.cs",
+              "ToolTip": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\Program.cs",
+              "RelativeToolTip": "AuctionWebApplication\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T18:40:11.922Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

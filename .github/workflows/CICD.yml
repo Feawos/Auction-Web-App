@@ -1,4 +1,4 @@
-name: ASP.NET MVC Auction Web-App CI/CD pipeline 
+name: ASP.NET MVC Auction Web-App CI/CD pipeline
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
   pull_request:
     branches:
       - main
-   
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,11 +36,11 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore AuctionWebApplication.csproj
       working-directory: ./AuctionWebApplication
-     
+
     - name: Build project
       run: dotnet build --configuration Release AuctionWebApplication.csproj
       working-directory: ./AuctionWebApplication
-      
+
     - name: Test project
       run: dotnet test AuctionWebApplication.csproj
       working-directory: ./AuctionWebApplication
@@ -49,105 +49,105 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Analyze code with SonarCloud
-        uses: sonarsource/sonarcloud-github-action@master
-        with:
-          args: >
-            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
-            -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    - name: Analyze code with SonarCloud
+      uses: sonarsource/sonarcloud-github-action@master
+      with:
+        args: >
+          -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+          -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   deploy_dev:
     runs-on: ubuntu-latest
     needs: [build, code_scanning]
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
 
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '7.x'
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.x'
 
-      - name: Publish Artifact
-        run: dotnet publish -c Release -o ${{github.workspace}}/publish AuctionWebApplication.csproj
-        working-directory: ./AuctionWebApplication
+    - name: Publish Artifact
+      run: dotnet publish -c Release -o ${{ github.workspace }}/publish AuctionWebApplication.csproj
+      working-directory: ./AuctionWebApplication
 
-      - name: Deploy to Development
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'feawosauctions'
-          slot-name: 'Development'
-          publish-profile: ${{ secrets.DEV_AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: '${{github.workspace}}/publish'
+    - name: Deploy to Development
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'feawosauctions'
+        slot-name: 'Development'
+        publish-profile: ${{ secrets.DEV_AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: '${{ github.workspace }}/publish'
 
   deploy_staging:
     runs-on: ubuntu-latest
-    needs: [deploy_dev] # Deploy staging only after dev deployment
-    if: github.ref == 'refs/tags/staging'
+    needs: [deploy_dev] 
+    if: startsWith(github.ref, 'refs/tags/staging')
     steps:
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
 
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '7.x'
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.x'
 
-      - name: Publish Artifact
-        run: dotnet publish -c Release -o ${{github.workspace}}/publish AuctionWebApplication.csproj
-        working-directory: ./AuctionWebApplication
+    - name: Publish Artifact
+      run: dotnet publish -c Release -o ${{ github.workspace }}/publish AuctionWebApplication.csproj
+      working-directory: ./AuctionWebApplication
 
-      - name: Deploy to Staging
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'feawosauctions'
-          slot-name: 'Staging'
-          publish-profile: ${{ secrets.STAGING_AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: '${{github.workspace}}/publish'
+    - name: Deploy to Staging
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'feawosauctions'
+        slot-name: 'Staging'
+        publish-profile: ${{ secrets.STAGING_AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: '${{ github.workspace }}/publish'
 
   deploy_prod:
     runs-on: ubuntu-latest
-    needs: [deploy_staging] # Deploy production only after staging deployment
-    if: github.ref == 'refs/tags/release'
+    needs: [deploy_staging] 
+    if: startsWith(github.ref, 'refs/tags/release')
     steps:
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
 
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '7.x'
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.x'
 
-      - name: Publish Artifact
-        run: dotnet publish -c Release -o ${{github.workspace}}/publish AuctionWebApplication.csproj
-        working-directory: ./AuctionWebApplication
+    - name: Publish Artifact
+      run: dotnet publish -c Release -o ${{ github.workspace }}/publish AuctionWebApplication.csproj
+      working-directory: ./AuctionWebApplication
 
-      - name: Deploy to Production
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'feawosauctions'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.PROD_AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: '${{github.workspace}}/publish'
+    - name: Deploy to Production
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'feawosauctions'
+        slot-name: 'Production'
+        publish-profile: ${{ secrets.PROD_AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: '${{ github.workspace }}/publish'

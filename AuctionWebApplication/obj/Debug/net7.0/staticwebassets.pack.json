@@ -21,8 +21,16 @@
       "PackagePath": "staticwebassets\\img\\fabian-heimann-4R_WEmhx8og-unsplash.jpg"
     },
     {
+      "Id": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\wwwroot\\img\\hero.jpg",
+      "PackagePath": "staticwebassets\\img\\hero.jpg"
+    },
+    {
       "Id": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\wwwroot\\img\\menstshirtsmain1.jpg",
       "PackagePath": "staticwebassets\\img\\menstshirtsmain1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\wwwroot\\img\\tamara-bellis-HY1fq4ZtLTE-unsplash.jpg",
+      "PackagePath": "staticwebassets\\img\\tamara-bellis-HY1fq4ZtLTE-unsplash.jpg"
     },
     {
       "Id": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\wwwroot\\js\\site.js",

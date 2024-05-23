@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Auction-Web-App",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FbH0j6iOKcwjcF09k7maceAjqXsuUEhidmTF8TfA9pc=",
+  "Hash": "y7e/H1ErRVfbn7IO0wo1bplipvZNMsSuPjq1Qpb8XZ4=",
   "Source": "AuctionWebApplication",
   "BasePath": "_content/AuctionWebApplication",
   "Mode": "Default",
@@ -1271,6 +1271,25 @@
       "OriginalItemSpec": "wwwroot\\img\\fabian-heimann-4R_WEmhx8og-unsplash.jpg"
     },
     {
+      "Identity": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\wwwroot\\img\\hero.jpg",
+      "SourceId": "AuctionWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\wwwroot\\",
+      "BasePath": "_content/AuctionWebApplication",
+      "RelativePath": "img/hero.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\hero.jpg"
+    },
+    {
       "Identity": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\wwwroot\\img\\menstshirtsmain1.jpg",
       "SourceId": "AuctionWebApplication",
       "SourceType": "Discovered",
@@ -1288,6 +1307,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\menstshirtsmain1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\wwwroot\\img\\tamara-bellis-HY1fq4ZtLTE-unsplash.jpg",
+      "SourceId": "AuctionWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\wwwroot\\",
+      "BasePath": "_content/AuctionWebApplication",
+      "RelativePath": "img/tamara-bellis-HY1fq4ZtLTE-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\tamara-bellis-HY1fq4ZtLTE-unsplash.jpg"
     },
     {
       "Identity": "C:\\Users\\AWOSANYA\\source\\repos\\Feawos\\Auction-Web-App\\AuctionWebApplication\\wwwroot\\js\\site.js",

@@ -1,5 +1,3 @@
-# This workflow demonstrates the CI/CD pipelines for deployment in development, staging and production environments for the Auction web application.
-
 name: ASP.NET MVC Auction Web-App CI/CD pipeline 
 
 on:
@@ -96,7 +94,7 @@ jobs:
 
   deploy_staging:
     runs-on: ubuntu-latest
-    needs: [build, code_scanning, deploy_dev]
+    needs: [deploy_dev] # Deploy staging only after dev deployment
     if: github.ref == 'refs/tags/staging'
     steps:
       - name: Set up Node.js
@@ -126,7 +124,7 @@ jobs:
 
   deploy_prod:
     runs-on: ubuntu-latest
-    needs: [build, code_scanning]
+    needs: [deploy_staging] # Deploy production only after staging deployment
     if: github.ref == 'refs/tags/release'
     steps:
       - name: Set up Node.js
@@ -153,4 +151,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.PROD_AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: '${{github.workspace}}/publish'
-
